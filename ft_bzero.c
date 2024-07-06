@@ -1,34 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ginabartusch <ginabartusch@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/04 00:37:29 by ginabartusc       #+#    #+#             */
-/*   Updated: 2024/07/06 14:43:27 by ginabartusc      ###   ########.fr       */
+/*   Created: 2024/07/04 19:02:31 by ginabartusc       #+#    #+#             */
+/*   Updated: 2024/07/06 14:43:14 by ginabartusc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <ctype.h>
+#include <strings.h>
 #include "libft.h"
 
-int	ft_isascii(int c)
+void	ft_bzero(void *s, size_t n)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	else
-		return (0);
+	char	*str;
+	size_t	i;
+
+	str = s;
+	i = 0;
+	if (n == 0)
+		return ;
+	while (i < n)
+	{
+		str[i] = 0;
+		i++;
+	}
 }
 
 // int	main(void)
 // {
-// 	int	num;
-// 	int	res;
+// 	char	str[20] = {0};
+// 	char	str1[20] = {0};
+// 	size_t	n;
 
-// 	num = ft_isascii(0x2a);
-// 	printf("%d\n", num);
-// 	res = isascii(0x2a);
-// 	printf("%d\n", res);
+// 	n = 6;
+// 	ft_bzero(str, n);
+// 	printf("%s\n", str);
+// 	bzero(str1, n);
+// 	printf("%s\n", str1);
 // }

@@ -6,7 +6,7 @@
 /*   By: ginabartusch <ginabartusch@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 00:28:10 by ginabartusc       #+#    #+#             */
-/*   Updated: 2024/07/04 00:36:45 by ginabartusc      ###   ########.fr       */
+/*   Updated: 2024/07/06 14:43:32 by ginabartusc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ int	ft_isdigit(int c)
 		return (0);
 }
 
-int	main(void)
-{
-    int	num;
-	int	res;
+// int	main(void)
+// {
+// 	int	num;
+// 	int	res;
 
-    num = ft_isdigit('a');
-    printf("%d\n", num);
-	res = isdigit('a');
-    printf("%d\n", res);
-}
+// 	num = ft_isdigit('a');
+// 	printf("%d\n", num);
+// 	res = isdigit('a');
+// 	printf("%d\n", res);
+// }

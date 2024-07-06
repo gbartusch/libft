@@ -1,34 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ginabartusch <ginabartusch@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/04 00:37:29 by ginabartusc       #+#    #+#             */
-/*   Updated: 2024/07/06 14:43:27 by ginabartusc      ###   ########.fr       */
+/*   Created: 2024/07/04 17:31:43 by ginabartusc       #+#    #+#             */
+/*   Updated: 2024/07/06 14:44:09 by ginabartusc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <ctype.h>
+#include <string.h>
 #include "libft.h"
 
-int	ft_isascii(int c)
+size_t	ft_strlen(const char *s)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	else
-		return (0);
+	size_t	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
 
 // int	main(void)
 // {
-// 	int	num;
-// 	int	res;
+// 	size_t	num;
+// 	size_t	res;
 
-// 	num = ft_isascii(0x2a);
-// 	printf("%d\n", num);
-// 	res = isascii(0x2a);
-// 	printf("%d\n", res);
+// 	num = ft_strlen("helloworld");
+// 	printf("%zu\n", num);
+// 	res = strlen("helloworld");
+// 	printf("%zu\n", res);
 // }

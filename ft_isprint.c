@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ginabartusch <ginabartusch@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/04 00:37:29 by ginabartusc       #+#    #+#             */
-/*   Updated: 2024/07/06 14:43:27 by ginabartusc      ###   ########.fr       */
+/*   Created: 2024/07/04 17:09:21 by ginabartusc       #+#    #+#             */
+/*   Updated: 2024/07/06 14:43:36 by ginabartusc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 #include <ctype.h>
 #include "libft.h"
 
-int	ft_isascii(int c)
+int	ft_isprint(int c)
 {
-	if (c >= 0 && c <= 127)
+	if (c >= 32 && c <= 126)
 		return (1);
 	else
 		return (0);
@@ -27,8 +27,8 @@ int	ft_isascii(int c)
 // 	int	num;
 // 	int	res;
 
-// 	num = ft_isascii(0x2a);
+// 	num = ft_isprint('#');
 // 	printf("%d\n", num);
-// 	res = isascii(0x2a);
+// 	res = isprint('#');
 // 	printf("%d\n", res);
 // }

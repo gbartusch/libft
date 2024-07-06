@@ -1,34 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ginabartusch <ginabartusch@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/04 00:37:29 by ginabartusc       #+#    #+#             */
-/*   Updated: 2024/07/06 14:43:27 by ginabartusc      ###   ########.fr       */
+/*   Created: 2024/07/04 19:33:18 by ginabartusc       #+#    #+#             */
+/*   Updated: 2024/07/06 14:43:41 by ginabartusc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <ctype.h>
+#include <string.h>
 #include "libft.h"
 
-int	ft_isascii(int c)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	else
-		return (0);
+	size_t		i;
+	char		*dst1;
+	const char	*src1;
+
+	dst1 = dst;
+	src1 = src;
+	i = 0;
+	while (i < n)
+	{
+		dst1[i] = src1[i];
+		i++;
+	}
+	return (dst);
 }
 
 // int	main(void)
 // {
-// 	int	num;
-// 	int	res;
+// 	char	dest[20] = {0};
+// 	char	src[20] = "HelloWorld";
+// 	char	dest1[20] = {0};
+// 	char	src1[20] = "HelloWorld";
+// 	size_t	n;
 
-// 	num = ft_isascii(0x2a);
-// 	printf("%d\n", num);
-// 	res = isascii(0x2a);
-// 	printf("%d\n", res);
+// 	n = 5;
+// 	ft_memcpy(dest, src, n);
+// 	printf("%s\n", dest);
+// 	memcpy(dest1, src1, n);
+// 	printf("%s\n", dest1);
 // }
