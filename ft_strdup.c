@@ -1,53 +1,55 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ginabartusch <ginabartusch@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/06 15:40:30 by ginabartusc       #+#    #+#             */
-/*   Updated: 2024/07/08 00:57:55 by ginabartusc      ###   ########.fr       */
+/*   Created: 2024/07/08 18:07:44 by ginabartusc       #+#    #+#             */
+/*   Updated: 2024/07/08 19:19:40 by ginabartusc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+char	*ft_strdup(const char *s1)
 {
-	int	i;
-	int	num;
-	int	sign;
+	char	*str;
+	int		length;
+	int		i;
 
 	i = 0;
-	num = 0;
-	sign = 1;
-	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	length = 0;
+	while (s1[length] != '\0')
 	{
-		if (str[i] == '-')
-			sign *= -1;
+		length++;
+	}
+	str = malloc(length + 1);
+	if (str == NULL)
+		return (NULL);
+	while (s1[i] != '\0')
+	{
+		str[i] = s1[i];
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		num = num * 10 + (str[i] - '0');
-		i++;
-	}
-	return (num * sign);
+	str[i] = '\0';
+	return (str);
 }
 
 /* int	main(void)
 {
-	char	*str = "   -414748abhdjjd4484";
-	char	*str1 = "   -414748abhdjjd4484";
-	int		num;
-	int		res;
+	char	*s1 = "HelloWorld";
+	char	*str;
+	char	*str1;
+	
+	str = ft_strdup(s1);
+	printf("%s\n", str);
+	str1 = strdup(s1);
+	printf("%s\n", str1);
 
-	num = ft_atoi(str);
-	printf("%d\n", num);
-	res = atoi(str1);
-	printf("%d\n", res);
+	free(str);
+	free(str1);
 } */
