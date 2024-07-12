@@ -6,7 +6,7 @@
 /*   By: ginabartusch <ginabartusch@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 14:23:00 by ginabartusc       #+#    #+#             */
-/*   Updated: 2024/07/11 14:45:18 by ginabartusc      ###   ########.fr       */
+/*   Updated: 2024/07/13 00:56:17 by ginabartusc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set);
+int     ft_countwords(char const *s, char c);
+char	**ft_split(char const *s, char c);
 
 #endif
