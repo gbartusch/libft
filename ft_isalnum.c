@@ -6,11 +6,10 @@
 /*   By: ginabartusch <ginabartusch@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 00:27:22 by ginabartusc       #+#    #+#             */
-/*   Updated: 2024/07/06 14:43:18 by ginabartusc      ###   ########.fr       */
+/*   Updated: 2024/07/13 18:00:19 by ginabartusc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <ctype.h>
 #include "libft.h"
 
@@ -23,6 +22,7 @@ int	ft_isalnum(int c)
 		return (0);
 }
 
+// #include <stdio.h>
 // int	main(void)
 // {
 // 	int	num;
