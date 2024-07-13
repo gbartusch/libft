@@ -1,38 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ginabartusch <ginabartusch@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/04 17:31:43 by ginabartusc       #+#    #+#             */
-/*   Updated: 2024/07/13 20:47:19 by ginabartusc      ###   ########.fr       */
+/*   Created: 2024/07/13 19:31:55 by ginabartusc       #+#    #+#             */
+/*   Updated: 2024/07/13 20:55:12 by ginabartusc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	i;
+	unsigned int		i;
+	char				*str;
 
 	i = 0;
+	str = malloc((ft_strlen(s) + 1) * sizeof(char));
+	if (str == NULL)
+		return (NULL);
 	while (s[i] != '\0')
 	{
+		str[i] = f(i, s[i]);
 		i++;
 	}
-	return (i);
+	str[i] = '\0';
+	return (str);
 }
+
+/* char	myfunc(unsigned int i, char c)
+{
+	printf("index = %d and character %c\n", i, c);
+	return (c);
+} */
 
 /* int	main(void)
 {
-	size_t	num;
-	size_t	res;
-
-	num = ft_strlen("helloworld");
-	printf("%zu\n", num);
-	res = strlen("helloworld");
-	printf("%zu\n", res);
-} */
+	char	*s = "Hello";
+	char	*s1;
+	
+	s1 = ft_strmapi(s, &myfunc);
+	printf("%s\n", s1);
+}
+ */
