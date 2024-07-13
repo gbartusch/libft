@@ -6,7 +6,7 @@
 /*   By: ginabartusch <ginabartusch@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 23:32:06 by ginabartusc       #+#    #+#             */
-/*   Updated: 2024/07/13 00:54:59 by ginabartusc      ###   ########.fr       */
+/*   Updated: 2024/07/13 14:19:02 by ginabartusc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,43 +14,19 @@
 #include <stdio.h>
 #include "libft.h"
 
-int	ft_countwords(char const *s, char c)
-{
-	int	i;
-	int	count;
-	int	in_substring;
-
-	i = 0;
-	count = 0;
-	in_substring = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] == c)
-		{
-			in_substring = 0;
-		}
-		else if (!in_substring)
-		{
-			in_substring = 1;
-			count++;
-		}
-		i++;
-	}
-	return (count);
-}
+static void	*freesubs(char **array, int j);
+static int	countwords(char const *s, char c);
 
 char	**ft_split(char const *s, char c)
 {
 	char	**array;
-	int		words;
 	int		i;
 	int		j;
 	int		start;
 
 	j = 0;
 	i = 0;
-	words = ft_countwords(s, c);
-	array = (char **)malloc((words + 1) * sizeof(char *));
+	array = (char **)malloc((countwords(s, c) + 1) * sizeof(char *));
 	if (array == NULL)
 		return (NULL);
 	while (s[i])
@@ -61,25 +37,49 @@ char	**ft_split(char const *s, char c)
 		while (s[i] && s[i] != c)
 			i++;
 		if (i > start)
-		{
 			array[j] = ft_substr(s, start, i - start);
-			if (!array[j])
-			{
-				while (j-- > 0)
-					free(array[j]);
-				free(array);
-				return (NULL);
-			}
-			j++;
-		}
+		if (!array[j])
+			return (freesubs(array, j));
+		j++;
 	}
-	array [j] = NULL;
+	array[j] = NULL;
 	return (array);
 }
 
-int	main(void)
+static void	*freesubs(char **array, int j)
 {
-	char	*s = "HelloMyNameIsGina";
+	while (j-- > 0)
+		free(array[j]);
+	free(array);
+	return (NULL);
+}
+
+static int	countwords(char const *s, char c)
+{
+	int	i;
+	int	count;
+
+	i = 0;
+	count = 0;
+	while (s[i] != '\0')
+	{
+		while (s[i] == c)
+		{
+			i++;
+		}
+		if (s[i] != '\0')
+		{
+			count++;
+			while (s[i] != '\0' && s[i] != c)
+				i++;
+		}
+	}
+	return (count);
+}
+
+/* int	main(void)
+{
+	char	*s = "WelcometoCodam";
 	char	c;
 	int		i;
 	char	**array;
@@ -87,10 +87,16 @@ int	main(void)
 	i = 0;
 	c = 'e';
 	array = ft_split(s, c);
+	if (array == NULL)
+	{
+		printf("Memory allocation failed\n");
+		return (1);
+	}
 	while (array[i])
 	{
 		printf("%s\n", array[i]);
+		free(array[i]);
 		i++;
 	}
 	free(array);
-}
+} */
