@@ -6,7 +6,7 @@
 /*   By: ginabartusch <ginabartusch@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 23:32:06 by ginabartusc       #+#    #+#             */
-/*   Updated: 2024/07/13 14:19:02 by ginabartusc      ###   ########.fr       */
+/*   Updated: 2024/07/17 14:17:05 by ginabartusc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,14 @@ char	**ft_split(char const *s, char c)
 	array = (char **)malloc((countwords(s, c) + 1) * sizeof(char *));
 	if (array == NULL)
 		return (NULL);
-	while (s[i])
+	while (j < countwords(s, c))
 	{
 		while (s[i] == c)
 			i++;
 		start = i;
 		while (s[i] && s[i] != c)
 			i++;
-		if (i > start)
-			array[j] = ft_substr(s, start, i - start);
+		array[j] = ft_substr(s, start, i - start);
 		if (!array[j])
 			return (freesubs(array, j));
 		j++;
@@ -79,17 +78,17 @@ static int	countwords(char const *s, char c)
 
 /* int	main(void)
 {
-	char	*s = "WelcometoCodam";
+	char	*s = "  WelcometoCodam. hello   gina ! ";
 	char	c;
 	int		i;
 	char	**array;
 
 	i = 0;
-	c = 'e';
+	c = ' ';
 	array = ft_split(s, c);
 	if (array == NULL)
 	{
-		printf("Memory allocation failed\n");
+		printf("NULL ptr returned\n");
 		return (1);
 	}
 	while (array[i])

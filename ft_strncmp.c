@@ -6,7 +6,7 @@
 /*   By: ginabartusch <ginabartusch@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 19:20:07 by ginabartusc       #+#    #+#             */
-/*   Updated: 2024/07/06 22:27:06 by ginabartusc      ###   ########.fr       */
+/*   Updated: 2024/07/18 15:50:54 by ginabartusc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,17 +30,17 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	return (s1[i] - s2[i]);
 }
 
-// int	main(void)
-// {
-// 	int		num;
-// 	int		res;
-// 	char	s1[] = "Helsa";
-// 	char	s2[] = "Hello";
-// 	int		n;
+/* int	main(void)
+{
+	int		num;
+	int		res;
+	char	s1[] = "a\200b";
+	char	s2[] = "a\001c";
+	int		n;
 
-// 	n = 4;
-// 	num = ft_strncmp(s1, s2, n);
-// 	printf("%d\n", num);
-// 	res = strncmp(s1, s2, n);
-// 	printf("%d\n", res);
-// }
+	n = 4;
+	num = ft_strncmp(s1, s2, n);
+	printf("%d\n", num);
+	res = strncmp(s1, s2, n);
+	printf("%d\n", res);
+} */
