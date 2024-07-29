@@ -6,11 +6,13 @@
 /*   By: ginabartusch <ginabartusch@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 14:17:42 by ginabartusc       #+#    #+#             */
-/*   Updated: 2024/07/24 20:28:40 by ginabartusc      ###   ########.fr       */
+/*   Updated: 2024/07/29 15:42:53 by ginabartusc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
@@ -33,3 +35,66 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (new_list);
 }
+
+/* void *to_uppercase(void *content)
+{
+    char *str = strdup((char *)content);
+	if (!str)
+        return NULL;
+
+	char	*ptr = str;
+    while (*ptr)
+    {
+        if ('a' <= *ptr && *ptr <= 'z')
+            *ptr -= 32; // Convert lowercase to uppercase
+        ptr++;
+    }
+	return str;
+}
+
+void del(void *content)
+{
+    free(content);
+}
+
+void print_list(t_list *lst)
+{
+    while (lst)
+    {
+        printf("%s -> ", (char *)lst->content);
+        lst = lst->next;
+    }
+    printf("NULL\n");
+}
+
+int main(void)
+{
+    t_list *new;
+    t_list *head;
+
+    head = ft_lstnew(strdup("hello"));
+    new = head;
+    new->next = ft_lstnew(strdup("world"));
+    new->next->next = ft_lstnew(strdup("how"));
+    new->next->next->next = ft_lstnew(strdup("are"));
+    new->next->next->next->next = ft_lstnew(strdup("you"));
+
+    printf("Original list:\n");
+    print_list(new);
+
+    // Map the function to the list
+    t_list *new_list = ft_lstmap(new, to_uppercase, del);
+
+    // Print the new list
+    printf("Mapped list:\n");
+    print_list(new_list);
+
+    // Free allocated memory
+    ft_lstclear(&new, del);
+    ft_lstclear(&new_list, del);
+
+    return 0;
+} */
+
+
+
