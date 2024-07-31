@@ -6,7 +6,7 @@
 /*   By: ginabartusch <ginabartusch@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 14:17:42 by ginabartusc       #+#    #+#             */
-/*   Updated: 2024/07/29 15:42:53 by ginabartusc      ###   ########.fr       */
+/*   Updated: 2024/07/31 12:33:12 by ginabartusc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,3 @@ int main(void)
 
     return 0;
 } */
-
-
-
