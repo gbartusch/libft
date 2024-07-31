@@ -6,7 +6,7 @@
 /*   By: ginabartusch <ginabartusch@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 16:27:13 by ginabartusc       #+#    #+#             */
-/*   Updated: 2024/07/17 15:17:12 by ginabartusc      ###   ########.fr       */
+/*   Updated: 2024/07/31 15:47:41 by ginabartusc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s);
 		s++;
 	}
+	if (chr == '\0')
+		return ((char *)s);
 	return (NULL);
 }
 

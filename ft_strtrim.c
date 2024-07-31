@@ -6,7 +6,7 @@
 /*   By: ginabartusch <ginabartusch@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 00:58:30 by ginabartusc       #+#    #+#             */
-/*   Updated: 2024/07/11 14:43:07 by ginabartusc      ###   ########.fr       */
+/*   Updated: 2024/07/31 18:18:54 by ginabartusc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (i < s_len && ft_strchr(set, s1[i]))
 		i++;
 	s_len = s_len - i + 1;
-	str = malloc(s_len + 1);
+	str = malloc(s_len);
 	if (str == NULL)
 		return (NULL);
 	ft_strlcpy(str, (char *) s1 + i, s_len);

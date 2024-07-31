@@ -6,7 +6,7 @@
 /*   By: ginabartusch <ginabartusch@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 16:05:33 by ginabartusc       #+#    #+#             */
-/*   Updated: 2024/07/15 16:21:41 by ginabartusc      ###   ########.fr       */
+/*   Updated: 2024/07/31 16:12:58 by ginabartusc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putchar_fd(char c, int fd);
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n > 0 && n < 10)
+	if (n >= 0 && n < 10)
 	{
 		ft_putchar_fd(n + '0', fd);
 	}
@@ -46,7 +46,7 @@ void	ft_putnbr_fd(int n, int fd)
 	int	n;
 	int	fd;
 
-	n = -32488;
-	fd = 1;
+	n = 0;
+	fd = 2;
 	ft_putnbr_fd(n, fd);
 } */
