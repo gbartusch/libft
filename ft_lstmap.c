@@ -6,13 +6,25 @@
 /*   By: ginabartusch <ginabartusch@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 14:17:42 by ginabartusc       #+#    #+#             */
-/*   Updated: 2024/07/31 19:05:30 by ginabartusc      ###   ########.fr       */
+/*   Updated: 2024/08/05 11:39:42 by ginabartusc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 #include <string.h>
+
+static t_list	*mapnewnode(t_list *lst, void *(*f)(void *))
+{
+	t_list	*new;
+
+	new = malloc(sizeof(t_list));
+	if (!new)
+		return (NULL);
+	new->content = (*f)(lst->content);
+	new->next = NULL;
+	return (new);
+}
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
@@ -24,7 +36,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	new_list = NULL;
 	while (lst)
 	{
-		new_node = ft_lstnew(f(lst->content));
+		new_node = mapnewnode(lst, f);
 		if (!new_node)
 		{
 			ft_lstclear(&new_list, del);
