@@ -20,7 +20,7 @@ $(NAME): $(OFILES)
 	ar rcs $(NAME) $(OFILES)
 
 bonus: $(BONUS_OFILES)
-	ar rcs $(NAME) $(BONUS_OFILES) $(OFILES) 
+	ar rcs $(NAME) $(BONUS_OFILES)
 
 clean:
 	rm -f $(OFILES) $(BONUS_OFILES)
