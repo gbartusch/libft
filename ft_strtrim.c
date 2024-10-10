@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
@@ -34,7 +32,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (str);
 }
 
-/* int	main(void)
+/* 
+#include <stdio.h>
+int	main(void)
 {
 	char	*s1 = "bcaHellOcab";
 	char	*set = "abc";

@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
@@ -30,7 +28,10 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-/* int	main(void)
+/* 
+#include <string.h>
+#include <stdio.h>
+int	main(void)
 {
 	char	str[] = "Hello[zero this out] welcome to Codam.";
 	int		c;

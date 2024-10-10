@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_atoi(const char *str)
@@ -39,7 +37,11 @@ int	ft_atoi(const char *str)
 	return (num * sign);
 }
 
-/* int	main(void)
+/* 
+#include <stdlib.h>
+#include <stdio.h>
+
+int	main(void)
 {
 	char	*str = "   -414748abhdjjd4484";
 	char	*str1 = "   -414748abhdjjd4484";

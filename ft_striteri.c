@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
@@ -28,7 +26,10 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	}
 }
 
-/* void	myfunc(unsigned int i, char *c)
+/* 
+#include <stdlib.h>
+#include <stdio.h>
+void	myfunc(unsigned int i, char *c)
 {
 	printf("index = %d and character %c\n", i, *c);
 }

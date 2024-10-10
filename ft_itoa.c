@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <stdbool.h>
 #include "libft.h"
 
 static char	*ft_strrev(char *str)
@@ -93,6 +90,10 @@ char	*ft_itoa(int n)
 	str = ft_strrev(str);
 	return (str);
 }
+
+//#include <stdlib.h>
+//#include <stdio.h>
+//#include <stdbool.h>
 
 // int	main(void)
 // {

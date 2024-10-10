@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_toupper(int c)
@@ -21,7 +19,10 @@ int	ft_toupper(int c)
 	return (c);
 }
 
-/* int	main(void)
+/* 
+#include <ctype.h>
+#include <stdio.h>
+int	main(void)
 {
 	printf("%c\n", ft_toupper('4'));
 	printf("%c\n", toupper('4'));

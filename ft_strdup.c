@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strdup(const char *s1)
@@ -39,7 +36,10 @@ char	*ft_strdup(const char *s1)
 	return (str);
 }
 
-/* int	main(void)
+/* 
+#include <string.h>
+#include <stdio.h>
+int	main(void)
 {
 	char	*s1 = "HelloWorld";
 	char	*str;

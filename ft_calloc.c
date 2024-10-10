@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
@@ -32,7 +29,12 @@ void	*ft_calloc(size_t count, size_t size)
 	return (str);
 }
 
-/* int main(void)
+/* 
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
 {
 	char	*str;
 	size_t	count;

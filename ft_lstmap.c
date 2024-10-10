@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 static t_list	*mapnewnode(t_list *lst, void *(*f)(void *))
 {
@@ -78,6 +76,9 @@ void print_list(t_list *lst)
     }
     printf("NULL\n");
 }
+
+#include <stdio.h>
+#include <string.h>
 
 int main(void)
 {

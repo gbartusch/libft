@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
@@ -45,6 +43,10 @@ void print_list(t_list *lst)
     }
     printf("NULL\n");
 }
+
+#include <stdio.h>
+#include <string.h>
+
 int main(void)
 {
     t_list *new;

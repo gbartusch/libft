@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
@@ -32,13 +30,17 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (str);
 }
 
-/* char	myfunc(unsigned int i, char c)
+/* 
+#include <stdlib.h>
+#include <stdio.h>
+char	myfunc(unsigned int i, char c)
 {
 	printf("index = %d and character %c\n", i, c);
 	return (c);
 } */
 
-/* int	main(void)
+/* 
+int	main(void)
 {
 	char	*s = "Hello";
 	char	*s1;

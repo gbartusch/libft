@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <strings.h>
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
@@ -30,7 +28,11 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 
-// int	main(void)
+
+//#include <stdio.h>
+//#include <strings.h>
+
+//int	main(void)
 // {
 // 	char	str[20] = {0};
 // 	char	str1[20] = {0};

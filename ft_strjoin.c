@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 static char	*ft_strcpy(char *dst, char *src)
@@ -44,7 +42,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (str);
 }
 
-/* int	main(void)
+/* 
+#include <stdio.h>
+#include <stdlib.h>
+int	main(void)
 {
 	char	*str;
 	char	*s1 = "Hello";

@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
 static void	*freesubs(char **array, int j);
@@ -77,6 +75,7 @@ static int	countwords(char const *s, char c)
 }
 
 /* int	main(void)
+#include <stdio.h>
 {
 	char	*s = "  WelcometoCodam. hello   gina ! ";
 	char	c;

@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
 #include "libft.h"
 
 int	ft_isalnum(int c)
@@ -23,6 +22,8 @@ int	ft_isalnum(int c)
 }
 
 // #include <stdio.h>
+// #include <ctype.h>
+
 // int	main(void)
 // {
 // 	int	num;

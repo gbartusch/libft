@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
@@ -42,6 +40,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	return (dst_len + src_len);
 }
 
+// #include <stdio.h>
+// #include <string.h>
 // int	main(void)
 // {
 // 	size_t	dstsize;
