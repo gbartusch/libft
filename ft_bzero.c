@@ -27,8 +27,6 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-
-
 //#include <stdio.h>
 //#include <strings.h>
 
