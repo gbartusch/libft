@@ -6,7 +6,7 @@
 /*   By: ginabartusch <ginabartusch@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 19:57:18 by ginabartusc       #+#    #+#             */
-/*   Updated: 2024/07/06 14:43:49 by ginabartusc      ###   ########.fr       */
+/*   Updated: 2024/10/12 19:41:48 by ginabartusc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,22 +20,20 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	src1 = src;
 	dst1 = dst;
-	i = len;
-	if (src1 < dst1 && dst1 < src1 + len)
+	i = -1;
+	if (src1 == dst1)
+		return (dst);
+	if (dst1 < src1)
 	{
-		while (i > 0)
-		{
-			dst1[i - 1] = src1[i - 1];
-			i--;
-		}
+		while (++i < len)
+			dst1[i] = src1[i];
 	}
 	else
 	{
-		i = 0;
-		while (i < len)
+		while (len > 0)
 		{
-			dst1[i] = src1[i];
-			i++;
+			dst1[len - 1] = src1[len - 1];
+			len--;
 		}
 	}
 	return (dst);

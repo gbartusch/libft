@@ -6,7 +6,7 @@
 /*   By: ginabartusch <ginabartusch@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 19:33:18 by ginabartusc       #+#    #+#             */
-/*   Updated: 2024/07/06 14:43:41 by ginabartusc      ###   ########.fr       */
+/*   Updated: 2024/10/12 19:05:58 by ginabartusc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	dst1 = dst;
 	src1 = src;
 	i = 0;
+	if (dst == src)
+		return (dst);
 	while (i < n)
 	{
 		dst1[i] = src1[i];
